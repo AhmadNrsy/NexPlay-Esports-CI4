@@ -18,8 +18,8 @@ class CorsFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         // Handle Preflight OPTIONS request
-        if ($request->getMethod() === 'options') {
-            $response = response();
+        if (strtolower($request->getMethod()) === 'options') {
+            $response = service('response');
             
             // Set required CORS headers for Preflight
             $this->setCorsHeaders($response);
