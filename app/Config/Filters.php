@@ -57,6 +57,7 @@ class Filters extends BaseFilters
             'pagecache',  // Web Page Caching
         ],
         'after' => [
+            'cors',
             'pagecache',   // Web Page Caching
             'performance', // Performance Metrics
             'toolbar',     // Debug Toolbar
