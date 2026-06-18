@@ -97,20 +97,20 @@ class Database extends Config
 
         // Load Railway Environment Variables securely in the constructor
         // This avoids PHP syntax errors (Constant expression contains invalid operations)
-        if (env('MYSQLHOST')) {
-            $this->default['hostname'] = env('MYSQLHOST');
+        if (getenv('MYSQLHOST')) {
+            $this->default['hostname'] = getenv('MYSQLHOST');
         }
-        if (env('MYSQLUSER')) {
-            $this->default['username'] = env('MYSQLUSER');
+        if (getenv('MYSQLUSER')) {
+            $this->default['username'] = getenv('MYSQLUSER');
         }
-        if (env('MYSQLPASSWORD')) {
-            $this->default['password'] = env('MYSQLPASSWORD');
+        if (getenv('MYSQLPASSWORD')) {
+            $this->default['password'] = getenv('MYSQLPASSWORD');
         }
-        if (env('MYSQLDATABASE')) {
-            $this->default['database'] = env('MYSQLDATABASE');
+        if (getenv('MYSQLDATABASE')) {
+            $this->default['database'] = getenv('MYSQLDATABASE');
         }
-        if (env('MYSQLPORT')) {
-            $this->default['port'] = env('MYSQLPORT');
+        if (getenv('MYSQLPORT')) {
+            $this->default['port'] = (int) getenv('MYSQLPORT');
         }
     }
 }
