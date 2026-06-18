@@ -1,0 +1,47 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Composer
+vendor/
+
+# Log files
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# CI4 Writable directories (keep the folders, ignore contents)
+writable/cache/*
+!writable/cache/index.html
+writable/logs/*
+!writable/logs/index.html
+writable/session/*
+!writable/session/index.html
+writable/uploads/*
+!writable/uploads/index.html
+writable/debugbar/*
+!writable/debugbar/index.html
+
+# Tests
+tests/
+phpunit.xml.dist
+
+# Railway/Nixpacks specific
+nixpacks.toml
+MIGRATION_REPORT.md
